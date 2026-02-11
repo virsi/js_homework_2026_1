@@ -80,4 +80,10 @@ QUnit.module("Тестируем функцию mergeBy", function() {
             { id: 1, config: { theme: "red" } }
         ]);
     });
+
+    QUnit.test("Обработка граничных случаев (null, не массивы, отсутствующий ключ)", function(assert) {
+        assert.deepEqual(mergeBy(null, [], 'id'), []);
+        assert.deepEqual(mergeBy([], {}, 'id'), []);
+        assert.deepEqual(mergeBy([], [], null), []);
+    });
 });

@@ -12,6 +12,10 @@
  * @returns {Array<Object>} Новый объединенный массив.
  */
 function mergeBy(arr1, arr2, key) {
+    if (!Array.isArray(arr1) || !Array.isArray(arr2)) {
+        return [];
+    }
+
     const map = new Map();
 
     arr1.forEach(item => {
@@ -23,7 +27,6 @@ function mergeBy(arr1, arr2, key) {
 
     arr2.forEach(item => {
         const id = item[key];
-
         if (!id) return;
 
         if (map.has(id)) {
