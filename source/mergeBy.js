@@ -16,7 +16,7 @@ function mergeBy(arr1, arr2, key) {
 
     arr1.forEach(item => {
         const id = item[key];
-        if (id !== undefined) {
+        if (id) {
             map.set(id, { ...item });
         }
     });
@@ -24,7 +24,7 @@ function mergeBy(arr1, arr2, key) {
     arr2.forEach(item => {
         const id = item[key];
 
-        if (id === undefined) return;
+        if (!id) return;
 
         if (map.has(id)) {
             const existingItem = map.get(id);
