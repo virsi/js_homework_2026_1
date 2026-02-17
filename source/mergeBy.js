@@ -11,7 +11,7 @@
  * @param {string} key - Название поля-идентификатора (например, "id").
  * @returns {Array<Object>} Новый объединенный массив.
  */
-function mergeBy(arr1, arr2, key) {
+const mergeBy = (arr1, arr2, key) => {
     if (!Array.isArray(arr1) || !Array.isArray(arr2)) {
         return [];
     }
@@ -51,4 +51,4 @@ function mergeBy(arr1, arr2, key) {
     });
 
     return Array.from(map.values());
-}
+};

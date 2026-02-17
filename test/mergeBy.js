@@ -1,7 +1,7 @@
 'use strict';
 
 QUnit.module("Тестируем функцию mergeBy", function() {
-    QUnit.test("Работает правильно с одинаковыми значениями по ключу (слияние массивов)", function(assert) {
+    QUnit.test("Работает правильно с одинаковыми значениями по ключу", function(assert) {
         const array1 = [
             { id: 1, name: "Alice", tags: ["friend"] },
             { id: 2, name: "Bob", tags: ["colleague"] }
@@ -19,7 +19,7 @@ QUnit.module("Тестируем функцию mergeBy", function() {
         ]);
     });
 
-    QUnit.test("Работает правильно с отсутствующими ключами (игнорирование)", function(assert) {
+    QUnit.test("Работает правильно с отсутствующими ключами", function(assert) {
         const array1 = [
             { id: 1, name: "Alice" },
             { id: 2, name: "Bob" }
